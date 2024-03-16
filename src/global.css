@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+     border: none;
+}
+
+body {
+     background-color: #212121;
+     color: white;
+     font-family: "Poppins", sans-serif;
+}
+
+.links {
+
+     & li.selecionado::before {
+          content: "";
+          height: 5px;
+          width: 5px;
+          border-radius: 50%;
+          background-color: #4CDB6C;
+          font-weight: 900;
+     }
+
+     & li {
+          font-size: 1em;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 14px;
+          transition: .5s;
+          font-weight: 300;
+          cursor: pointer;
+     }
+}
